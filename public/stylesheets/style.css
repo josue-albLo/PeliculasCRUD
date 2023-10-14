@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container {
+  width: 25%;
+  background-color: #2f043a;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.form-container h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.form-container input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-container button.btn-crear {
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-container button.btn-crear:hover {
+  background-color: #45a049;
+}
+
+.table-container {
+  width: 65%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-top-left-radius: 10px; /* Borde superior izquierdo redondeado */
+  border-top-right-radius: 10px; /* Borde superior derecho redondeado */
+  overflow: hidden; /* Oculta el contenido que sobresale del contenedor */
+}
+
+.table-container th, .table-container td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #2f043a; /* Agrega un borde en la parte inferior de cada celda */
+  border-top: 1px solid #2f043a; /* Agrega un borde en la parte superior de cada celda */
+}
+
+.table-container th {
+  background-color: #2f043a;
+  color: #fff;
+}
+
+
+
+
+.table-container button.btn-editar, .table-container button.btn-eliminar {
+  padding: 10px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.table-container button.btn-editar {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.table-container button.btn-eliminar {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.table-container button.btn-eliminar:hover {
+  background-color: #c0392b;
+}

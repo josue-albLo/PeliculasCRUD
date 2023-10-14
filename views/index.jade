@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    title Lista de Películas
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    .container
+      .form-container
+        h2 Agregar Nueva Película
+        form(id='movieForm')
+          label(for='title') Título:
+          input(type='text', id='title', name='title', required)
+          label(for='releaseYear') Año de Estreno:
+          input(type='number', id='releaseYear', name='releaseYear', min='1900', max='2023', required)
+          label(for='genre') Género:
+          input(type='text', id='genre', name='genre', required)
+          label(for='director') Director:
+          input(type='text', id='director', name='director', required)
+          label(for='actors') Actores (separados por comas):
+          input(type='text', id='actors', name='actors', required)
+          label(for='plot') Trama:
+          input(type='text', id='plot', name='plot', required)
+          label(for='rating') Calificación:
+          input(type='number', id='rating', name='rating', min=0 max=10 required)
+          button.btn-crear(type='button', onclick='saveMovie()') Crear Película
+
+      .table-container
+        table
+          thead
+            tr
+              th Título
+              th Año de Estreno
+              th Género
+              th Director
+              th Actores
+              th Trama
+              th Calificación
+              th Acciones
+          tbody
+            each movie in movies
+              tr
+                td= movie.title
+                td= movie.releaseYear
+                td= movie.genre
+                td= movie.director
+                td= movie.actors.join(', ')
+                td= movie.plot
+                td= movie.rating
+                td
+                  button.btn-editar(type="button", onclick=`loadMovieDetails('${movie._id}')`) Editar
+                  button.btn-eliminar(type="button", onclick=`deleteMovie('${movie._id}')`) Eliminar
+
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+  script(src="/javascripts/deleteMovie.js")
+  script(src="/javascripts/createMovie.js")
